@@ -16,8 +16,8 @@ function rot13(encodedStr){
 	// Your Result goes here
 	// Only change code below this line
 	
-	for (let i = 0; i < str.length; i++) {
-    let charCode = str.charCodeAt(i);
+	for (let i = 0; i < encodedStr.length; i++) {
+    let charCode = encodedStr.charCodeAt(i);
     
     if (charCode >= 65 && charCode <= 90) {
       // Shift the character code by 13 places
