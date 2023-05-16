@@ -16,16 +16,14 @@ function rot13(encodedStr){
 	// Your Result goes here
 	// Only change code below this line
 	
-	for (let i = 0; i < encodedStr.length; i++) {
-    let charCode = encodedStr.charCodeAt(i);
-    
-    if (charCode >= 65 && charCode <= 90) {
-      // Shift the character code by 13 places
-      charCode = ((charCode - 65 + 13) % 26) + 65;
-    }
-    
-    decodedArr.push(String.fromCharCode(charCode));
-  }
+	for(let i=0; i<encodedStr.length;i++){
+		if(lookup[ encodedStr[i] ] === undefined){
+			decodedArr.push( encodedStr[i] );
+		}
+		else{
+			decodedArr.push(lookup[encodedStr[i]]);
+		}
+	}
   
   return decodedArr;
 
